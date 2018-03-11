@@ -1,0 +1,80 @@
+#app{
+  background-image: url(../img/land_ocean_ice_2048.png);
+  width: 80%;
+}
+
+#inputs_button{
+  opacity: 0.8;
+}
+
+#weather{
+  opacity: 0.8;
+}
+
+#inputs_button input{
+  width:210px;
+  margin: 0 0 5px 0;
+}
+#inputs_button button{
+  margin: 7px 0 15px 0;
+  width: 100px;
+  height: 40px;
+}
+#weather li{
+  width: 210px;
+  margin: 0 0 5px 0;
+  
+}
+#weather li button{
+  text-align: center;
+  width: 75px;
+  height: 30px;
+  font-size: 15px;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+
+
+
+  /******média*****/
+  @media screen and (max-width: 993px) {
+
+  }
+  @media screen and (max-width: 575px) {
+    #inputs_button input{
+      width:210px;
+      margin: 0 0 5px 0;
+    }
+    #inputs_button button{
+      margin: 7px 0 15px 0;
+      width: 100px;
+      height: 40px;
+    }
+    #weather li{
+      width: 210px;
+      margin: 0 0 5px 0;
+      
+    }
+  }
+  @media screen and (max-width: 359px) {
+    #inputs_button input{
+      width:210px;
+      margin: 0 0 5px 0;
+    }
+    #inputs_button button{
+      margin: 7px 0 15px 0;
+      width: 100px;
+      height: 40px;
+    }
+    #weather li{
+      width: 210px;
+      margin: 0 0 5px 0;
+      
+    }
+  }

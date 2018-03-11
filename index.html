@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="css/weather.css">
+    
+</head>
+
+<body>
+<div class="container" id="app">
+    <div id="image" class="response">
+        <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="inputs_button">
+                <input type="text" class="form-control" v-model="city" placeholder="Search your City">
+                <input type="text" class="form-control" v-model="temp_min" placeholder="Temperature min">
+                <input type="text" class="form-control" v-model="temp_max" placeholder="Temperature max">
+                <input type="text" class="form-control" v-model="hum_min" placeholder="Humidity min">
+                <input type="text" class="form-control" v-model="hum_max" placeholder="humidity max">
+                <button type="submit" v-on:click="everyThing('foo', 'bar')" class="btn btn-default">Submit</button>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
+        </div>
+    <div id="magassag"></div>
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="weather">
+                <ul class="list-group">
+                    <li class="list-group-item">According to your parameters: {{comment}}</li>
+                    <li class="list-group-item">Temperature : {{temperature}} &#8451;</li>
+                    <li class="list-group-item">Humidity: {{humidity}} %</li>
+                    <li class="list-group-item"  id="media_but">
+                    <button type="button" class="btn btn-default text-center" v-on:click="show = !show">
+                        Show
+                    </button>
+                    <transition name="fade">
+                        <p v-if="show" class="text-right">Sky: <img v-bind:src="icon"></p>
+                    </transition>
+                    </li>
+                    
+                </ul>
+
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
+        </div>
+</div>
+
+</div>
+
+
+<script src="node_modules/vue/dist/vue.js" type="text/javascript"></script>
+<script src="node_modules/vue-axios/dist/vue-axios.es5.js" type="text/javascript"></script>
+<script src="node_modules/axios/dist/axios.js"></script>
+<script src="app.js" type="text/javascript"></script>
+<script src="https://github.com/vuejs/vue-cli.git" type="text/html"></script>
+<link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+
+
+</body>
+</html>
